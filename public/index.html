@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1220">
+  <title>Arcade Nexus App Center</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="window-shell">
+    <header class="window-titlebar">
+      <div class="traffic-dots" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="window-brand">
+        <img src="/icon.svg" alt="" width="18" height="18">
+        <strong>Arcade Nexus App Center</strong>
+        <span class="muted">Desktop mode ready</span>
+      </div>
+      <div class="window-actions">
+        <button id="installBtn" class="secondary hidden" type="button">Install App</button>
+        <a href="/admin.html" class="app-link">Control Room</a>
+        <a href="/docs.html" class="app-link">Help</a>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <span class="badge soft">Local desktop-style launcher</span>
+          <h1>One app window, many mini-games</h1>
+          <p>Run it as a local app, pin it, or open it in browser app mode. Your library, stats, and mini-games stay in one smooth launcher.</p>
+        </div>
+        <div class="hero-actions">
+          <button id="startBtn">Start</button>
+          <button id="resetBtn" class="secondary">Reset</button>
+          <button id="pauseBtn" class="secondary">Pause</button>
+        </div>
+      </header>
+
+      <main class="hub-layout">
+        <aside class="card sidebar-card">
+          <div class="section-head">
+            <h2>Installed Library</h2>
+            <span class="badge soft">5 titles</span>
+          </div>
+          <div class="stack small-stack compact-gap meta-stack">
+            <div class="list-card compact">
+              <strong>Quick launch</strong>
+              <div class="muted">Use <code>run-app.ps1</code> or <code>run-app.bat</code> for app-mode.</div>
+            </div>
+          </div>
+          <div id="gameList" class="stack" style="margin-top: 12px;"></div>
+        </aside>
+
+        <section class="card stage-card">
+          <div class="stage-topbar">
+            <div>
+              <h2 id="gameTitle">Loading…</h2>
+              <p id="gameSubtitle" class="muted">Preparing the arcade hub.</p>
+            </div>
+            <div class="stage-badges">
+              <span class="badge">Offline-friendly</span>
+              <span class="badge soft">Local saves</span>
+            </div>
+          </div>
+
+          <canvas id="arcadeCanvas" width="960" height="540"></canvas>
+          <div id="domGame" class="dom-game hidden"></div>
+          <div id="controlHint" class="control-hint"></div>
+        </section>
+
+        <aside class="card info-card">
+          <h2>Session Panel</h2>
+          <div id="scoreboard" class="stack"></div>
+
+          <h2>Activity Feed</h2>
+          <div id="events" class="log tall"></div>
+
+          <h2>Smart Queue</h2>
+          <div id="recommendations" class="stack small-stack"></div>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <script src="/game.js"></script>
+</body>
+</html>

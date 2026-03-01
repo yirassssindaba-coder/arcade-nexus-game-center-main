@@ -1,0 +1,11 @@
+{
+  "name": "arcade-nexus-app-center",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Desktop-style Game Center app: launcher scripts, installable PWA, app-window UI, local REST API, admin tools, telemetry, files, and feature flags.",
+  "scripts": {
+    "start": "node server.js",
+    "app": "node scripts/app-launcher.js",
+    "smoke": "node scripts/smoke-test.js"
+  }
+}

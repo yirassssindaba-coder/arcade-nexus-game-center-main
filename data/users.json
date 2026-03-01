@@ -1,0 +1,23 @@
+[
+  {
+    "id": "usr_admin",
+    "name": "Admin",
+    "email": "admin@example.local",
+    "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "roles": [
+      "admin",
+      "operator"
+    ],
+    "scopes": [
+      "global"
+    ],
+    "isEmailVerified": true,
+    "twoFactorEnabled": false,
+    "consentVersion": "v1",
+    "createdAt": "2026-03-01T08:59:59Z",
+    "updatedAt": "2026-03-01T08:59:59Z",
+    "deletedAt": null,
+    "archivedAt": null,
+    "version": 1
+  }
+]

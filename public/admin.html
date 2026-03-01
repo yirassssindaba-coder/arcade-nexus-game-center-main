@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1220">
+  <title>Arcade Nexus Control Room</title>
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="window-shell">
+    <header class="window-titlebar">
+      <div class="traffic-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="window-brand">
+        <img src="/icon.svg" alt="" width="18" height="18">
+        <strong>Arcade Nexus Control Room</strong>
+        <span class="muted">Local admin console</span>
+      </div>
+      <div class="window-actions">
+        <a href="/" class="app-link">Game Center</a>
+        <a href="/docs.html" class="app-link">Help</a>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <span class="badge soft">Admin tools</span>
+          <h1>Manage the local app library</h1>
+          <p>Update the mini-game catalog, feature flags, telemetry feed, and audit records from one desktop-style control room.</p>
+        </div>
+      </header>
+
+      <main class="admin-grid">
+        <section class="card">
+          <h2>Create Arcade Entry</h2>
+          <form id="itemForm" class="form-grid">
+            <input name="name" placeholder="Game title" required>
+            <input name="category" placeholder="Genre" value="arcade">
+            <input name="rarity" placeholder="Tier" value="common">
+            <input name="power" type="number" placeholder="Fun score" value="50">
+            <input name="value" type="number" placeholder="Catalog value" value="75">
+            <button type="submit">Add to Catalog</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>Feature Flags</h2>
+          <div id="flags" class="stack"></div>
+        </section>
+
+        <section class="card wide">
+          <div class="section-head">
+            <h2>Arcade Catalog</h2>
+            <button id="refreshBtn" class="secondary">Refresh</button>
+          </div>
+          <div id="items" class="table-wrap"></div>
+        </section>
+
+        <section class="card">
+          <h2>Users</h2>
+          <div id="users" class="stack"></div>
+        </section>
+
+        <section class="card">
+          <h2>Telemetry</h2>
+          <div id="telemetry" class="log tall"></div>
+        </section>
+
+        <section class="card">
+          <h2>Audit</h2>
+          <div id="audit" class="log tall"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="/admin.js"></script>
+</body>
+</html>

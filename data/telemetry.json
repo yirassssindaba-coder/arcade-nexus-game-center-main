@@ -1,0 +1,26 @@
+[
+  {
+    "id": "evt_19d2a4bd",
+    "name": "smoke_event",
+    "properties": {
+      "ok": true
+    },
+    "createdAt": "2026-03-01T09:17:07.336Z"
+  },
+  {
+    "id": "evt_7d57d13c",
+    "name": "smoke_event",
+    "properties": {
+      "ok": true
+    },
+    "createdAt": "2026-03-01T09:28:08.502Z"
+  },
+  {
+    "id": "evt_0fc6f1eb",
+    "name": "game_selected",
+    "properties": {
+      "gameId": "snake"
+    },
+    "createdAt": "2026-03-01T09:34:01.229Z"
+  }
+]

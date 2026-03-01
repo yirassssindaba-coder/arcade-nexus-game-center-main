@@ -1,0 +1,38 @@
+[
+  {
+    "id": "flag_smartRecommendations",
+    "key": "smartRecommendations",
+    "enabled": true,
+    "description": "Suggests games based on your recent play pattern.",
+    "updatedAt": "2026-03-01T09:10:00Z",
+    "createdAt": "2026-03-01T09:10:00Z",
+    "version": 1
+  },
+  {
+    "id": "flag_weekendTournaments",
+    "key": "weekendTournaments",
+    "enabled": true,
+    "description": "Highlights competitive mini-game sessions.",
+    "updatedAt": "2026-03-01T09:10:00Z",
+    "createdAt": "2026-03-01T09:10:00Z",
+    "version": 1
+  },
+  {
+    "id": "flag_dailyChallenges",
+    "key": "dailyChallenges",
+    "enabled": true,
+    "description": "Enables rotating score targets across games.",
+    "updatedAt": "2026-03-01T09:10:00Z",
+    "createdAt": "2026-03-01T09:10:00Z",
+    "version": 1
+  },
+  {
+    "id": "flag_adminImpersonation",
+    "key": "adminImpersonation",
+    "enabled": false,
+    "description": "Local admin demo toggle.",
+    "updatedAt": "2026-03-01T09:10:00Z",
+    "createdAt": "2026-03-01T09:10:00Z",
+    "version": 1
+  }
+]
