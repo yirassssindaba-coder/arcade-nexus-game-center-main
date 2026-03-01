@@ -1,79 +1,141 @@
-# Arcade Nexus App Center
+<div align="center">
 
-A lightweight **desktop-style game center app** built with plain browser JavaScript and a zero-dependency Node.js server.
+<!-- Animated Wave Header -->
+<img src="https://capsule-render.vercel.app/api?type=waving&height=210&color=0:0f172a,100:7c3aed&text=Arcade%20Nexus%20Game%20Center&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=A%20desktop-style%20arcade%20hub%20with%20multiple%20mini-games%2C%20a%20local%20admin%20panel%2C%20and%20a%20zero-dependency%20Node.js%20runtime%20built%20for%20instant%20launch%20and%20smooth%20play.&descAlignY=58" />
 
-This version shifts the previous browser hub into something that feels much more like an **application**:
+<!-- Typing SVG -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=3000&pause=700&color=60A5FA&center=true&vCenter=true&width=980&lines=Modern+arcade+hub+with+multiple+mini-games+in+one+fast+local+app;Switch+between+Snake%2C+Meteor+Dodge%2C+Target+Tap%2C+Memory%2C+and+Code+Breaker;Built+with+plain+JavaScript+and+a+zero-dependency+Node.js+server" />
 
-- Local launcher scripts that open the app in **browser app mode** (no normal tab bar)
-- Installable **PWA** support for app-like launching and pinning
-- Desktop-style window chrome and control-room layout
-- Multiple varied mini-games in one place
-- Local REST API for catalog data, telemetry, files, feature flags, auth, and audit
-- Admin panel to manage the arcade catalog and runtime flags
-- No external runtime dependencies required beyond Node.js
+<p>
+  <img src="https://img.shields.io/badge/Node.js-24-3c873a" />
+  <img src="https://img.shields.io/badge/JavaScript-ES202x-f7df1e" />
+  <img src="https://img.shields.io/badge/Genre-Arcade Hub-22c55e" />
+  <img src="https://img.shields.io/badge/Mode-Local App-f59e0b" />
+</p>
 
-## Included mini-games
+</div>
 
-- **Neon Snake Arena** — classic snake with speed ramp and best-score saving
-- **Meteor Dodge X** — survive waves of falling meteors
-- **Target Tap Blitz** — fast reaction clicking game
-- **Memory Flip Plus** — card matching puzzle
-- **Code Breaker Vault** — 4-digit logic guessing challenge
+---
 
-## Main pages
+## Overview
+Arcade Nexus Game Center is a desktop-style arcade hub that transforms the earlier single-game starter into one polished local app with multiple mini-games, a built-in admin panel, and a lightweight local API.
 
-- `/` → Game Center app
-- `/admin.html` → Control Room
-- `/docs.html` → Help / controls / API notes
+---
 
-## Run
+## Key Features
+## Game Variety
+- Play multiple mini-games in one launcher-friendly app
+- Switch instantly between arcade modes without restarting the server
+- Keep local best-score progress for replayable sessions
 
-### App mode (recommended)
+## App Experience
+- Clean home screen designed to feel more like an app than a plain web page
+- Fast local launch with no external runtime packages required
+- Stable browser-based rendering with responsive controls and clear HUD panels
 
+## Local Platform Tools
+- Built-in admin panel for catalog data and runtime flags
+- Local REST API for telemetry, audit, files, sessions, and seed data
+- Smoke test script for quick verification after launch
+
+---
+
+## Included Mini-Games
+## Core Arcade Modes
+- **Neon Snake Arena** - Classic snake with speed ramp and best-score tracking
+- **Meteor Dodge X** - Survive falling hazards and rising pressure
+- **Target Tap Blitz** - Fast reaction challenge with score bursts
+- **Memory Flip Plus** - Match cards under time pressure
+- **Code Breaker Vault** - Logic guessing mode with quick retry loops
+
+---
+
+## Tech Stack
+- Node.js 24
+- Plain browser JavaScript
+- HTML and CSS interface
+- Zero-dependency local server runtime
+- Local JSON data storage for app state, flags, and telemetry
+
+---
+
+## Preview
+- Main arcade hub: `public/index.html`
+- Admin control room: `public/admin.html`
+- Local docs and route guide: `public/docs.html`
+
+```text
+public/
+├── index.html
+├── admin.html
+├── docs.html
+├── game.js
+└── styles.css
+```
+
+---
+
+## Quick Start
 ```powershell
 Set-ExecutionPolicy -Scope Process Bypass
-.un-app.ps1
-```
-
-Or double-click `run-app.bat` on Windows.
-
-### Server only
-
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.un.ps1
-```
-
-### Node directly
-
-```powershell
-node .\server.js
-```
-
-### npm
-
-```powershell
+.\run.ps1
 npm start
 ```
 
-Then open:
+---
 
-- `http://127.0.0.1:3210/`
-- `http://127.0.0.1:3210/admin.html`
-- `http://127.0.0.1:3210/docs.html`
+## Local Routes
+- `/` - Arcade Game Center main hub
+- `/admin.html` - Admin panel for catalog and runtime controls
+- `/docs.html` - Local route and API reference
+- `/status` - Status endpoint for quick health checks
 
-## Stop background server (if launched with app mode)
+---
 
-```powershell
-.\stop-app.ps1
-```
-
-## Admin seed account
-
+## Admin Seed Account
 - **email:** `admin@example.local`
 - **password:** `admin123`
 
-## Notes
+---
 
-This build is intentionally kept dependency-light for stability and easier local runs.
-It uses browser local storage for best scores, a service worker for app-shell caching, and the local API for telemetry events.
+## Project Structure
+```text
+arcade-nexus-game-center-main/
+├── config/
+│   └── app.json
+├── data/
+│   ├── audit.json
+│   ├── files.json
+│   ├── flags.json
+│   ├── items.json
+│   ├── jobs.json
+│   ├── notifications.json
+│   ├── sessions.json
+│   ├── telemetry.json
+│   └── users.json
+├── public/
+│   ├── admin.html
+│   ├── admin.js
+│   ├── docs.html
+│   ├── game.js
+│   ├── index.html
+│   └── styles.css
+├── scripts/
+│   └── smoke-test.js
+├── package.json
+├── run.ps1
+├── run.sh
+└── server.js
+```
+
+---
+
+## Future Improvements
+- Add more mini-games and rotating seasonal modes
+- Add richer scoreboards and local player profiles
+- Add app-mode launcher enhancements and installable desktop packaging
+
+---
+
+## License
+For educational, portfolio, and prototype use.
